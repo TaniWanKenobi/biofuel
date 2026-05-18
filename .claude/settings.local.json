@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"C:\\\\Users\\\\tanis\\\\Downloads\\\\MER_Excel_Zip\")",
+      "Read(//c/Users/tanis/Downloads/MER_Excel_Zip/**)",
+      "Bash(python -c ' *)",
+      "Bash(pip install *)",
+      "Bash(python -m pip install openpyxl -q)"
+    ]
+  }
+}

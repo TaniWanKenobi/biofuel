@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biofuels: Alternative Energy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2e7d32',
+            dark: '#1a1a1a',
+            muted: '#6b7280',
+            offwhite: '#f7f9f9',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { font-family: 'Inter', sans-serif; }
+
+    .chem-table tbody tr:nth-child(even) { background: #f7f9f9; }
+    .chem-table tbody tr:hover { background: #e8f5e9; }
+
+    .timeline-circle {
+      width: 2.5rem; height: 2.5rem; min-width: 2.5rem;
+      border-radius: 50%; background: #2e7d32; color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 600; font-size: 0.95rem;
+    }
+    .timeline-connector {
+      flex: 1; height: 2px;
+      background: linear-gradient(90deg, #2e7d32, #a5d6a7);
+      min-width: 1.5rem;
+    }
+
+    .nav-link { transition: color 0.2s, border-color 0.2s; border-bottom: 2px solid transparent; }
+    .nav-link.active { color: #2e7d32; border-bottom-color: #2e7d32; }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-thumb { background: #2e7d32; border-radius: 4px; }
+    ::-webkit-scrollbar-track { background: #f7f9f9; }
+  </style>
+</head>
+<body class="bg-white text-dark font-sans antialiased">
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
+      <span class="font-semibold tracking-tight text-lg" style="color:#2e7d32">Biofuels</span>
+      <div class="flex gap-6 text-sm font-medium">
+        <a href="#home" class="nav-link pb-0.5 text-muted hover:text-green-800">Home</a>
+        <a href="#how-it-works" class="nav-link pb-0.5 text-muted hover:text-green-800">How It Works</a>
+        <a href="#advantages" class="nav-link pb-0.5 text-muted hover:text-green-800">Advantages</a>
+        <a href="#disadvantages" class="nav-link pb-0.5 text-muted hover:text-green-800">Disadvantages</a>
+        <a href="#distribution" class="nav-link pb-0.5 text-muted hover:text-green-800">Distribution</a>
+        <a href="#references" class="nav-link pb-0.5 text-muted hover:text-green-800">References</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 1 - HOME -->
+  <section id="home">
+
+    <!-- Hero -->
+    <div class="relative h-[75vh] min-h-[420px] flex items-center justify-center overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1400&q=80"
+           alt="Agricultural field" class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0" style="background:rgba(26,26,26,0.60)"></div>
+      <div class="relative z-10 text-center px-6" data-aos="fade-up">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-3xl mx-auto">
+          Growing Our Own Energy
+        </h1>
+        <p class="mt-4 text-lg md:text-xl text-gray-200 font-light">Biofuels: Alternative Energy</p>
+      </div>
+    </div>
+
+    <!-- Stat Card -->
+    <div class="max-w-6xl mx-auto px-6 -mt-16 relative z-20">
+      <div class="grid md:grid-cols-1 max-w-sm mx-auto gap-6">
+        <div class="bg-white rounded-lg shadow-md p-6" style="border-left:4px solid #2e7d32" data-aos="fade-up" data-aos-delay="200">
+          <p class="text-3xl font-bold" style="color:#2e7d32">21.2B</p>
+          <p class="mt-1 text-sm text-muted">gallons of biofuels produced in the United States in 2025</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- What Are Biofuels - text + image -->
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <div class="flex flex-col md:flex-row gap-10 items-start" data-aos="fade-up">
+        <div class="flex-1 text-dark/90 leading-relaxed space-y-4">
+          <h2 class="text-2xl font-semibold text-dark mb-4">What Are Biofuels?</h2>
+          <p>
+            Biofuels are liquid fuels and blending components produced from biological materials called feedstocks. Most biofuels are used as transportation fuels, but they can also be used for heating and electricity generation. Think of it this way: instead of burning oil that took millions of years to form underground, biofuels burn energy from plants and organic waste that can be regrown within a single season.
+          </p>
+          <p>
+            The names can vary. You might see terms like biodiesel, biojet, sustainable aviation fuel, renewable diesel, or clean fuel. They all fall under the biofuels umbrella. Nearly all gasoline sold in the U.S. today is already 10% ethanol. Most people are using biofuel without even knowing it.
+          </p>
+        </div>
+        <div class="w-full md:w-80 flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=640&q=80"
+               alt="Corn crop field" class="w-full h-56 object-cover rounded-lg shadow-md" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Four Stat Cards -->
+    <div class="max-w-6xl mx-auto px-6 pb-20">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
+        <div class="bg-white rounded-lg shadow-md p-6" style="border-left:4px solid #2e7d32">
+          <p class="text-2xl font-bold" style="color:#2e7d32">21.2B</p>
+          <p class="mt-1 text-sm text-muted">gallons produced in the U.S. in 2025</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6" style="border-left:4px solid #2e7d32">
+          <p class="text-2xl font-bold" style="color:#2e7d32">1B+</p>
+          <p class="mt-1 text-sm text-muted">net exporter of gallons in 2022</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6" style="border-left:4px solid #2e7d32">
+          <p class="text-2xl font-bold" style="color:#2e7d32">10%</p>
+          <p class="mt-1 text-sm text-muted">ethanol already in nearly all U.S. gasoline</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6" style="border-left:4px solid #2e7d32">
+          <p class="text-2xl font-bold" style="color:#2e7d32">$124B</p>
+          <p class="mt-1 text-sm text-muted">global market in 2023, projected $243B by 2033</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-200 max-w-5xl mx-auto"></div>
+  </section>
+
+  <!-- SECTION 2 - HOW IT WORKS -->
+  <section id="how-it-works" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <h2 class="text-3xl font-bold text-dark mb-2" data-aos="fade-up">How It Works</h2>
+      <p class="text-xs uppercase tracking-widest text-muted font-semibold mb-10" data-aos="fade-up">The Four Main Types of Biofuels. Source: U.S. EIA, official categories under the federal Renewable Fuel Standard Program.</p>
+
+      <!-- Type 1: Ethanol -->
+      <div class="mb-14" data-aos="fade-up">
+        <h3 class="text-xl font-semibold text-dark mb-3" style="color:#2e7d32">1. Ethanol</h3>
+        <p class="text-dark/90 leading-relaxed mb-4">
+          Ethanol is an alcohol fuel made from sugars and plant starches, most commonly corn in the U.S. and sugarcane in Brazil. The process is called fermentation. Yeast and bacteria are introduced to plant sugars, which converts the biomass into alcohol. That alcohol is then distilled and purified into fuel-grade ethanol.
+        </p>
+        <ul class="space-y-2 text-sm text-dark/80 mb-8 list-none">
+          <li class="flex gap-2"><span style="color:#2e7d32">●</span> Ethanol is blended into gasoline (usually 10%, called E10) to increase octane and reduce carbon monoxide emissions</li>
+          <li class="flex gap-2"><span style="color:#2e7d32">●</span> It accounted for 78% of all U.S. biofuel production in 2025</li>
+          <li class="flex gap-2"><span style="color:#2e7d32">●</span> In 2025, the U.S. produced 16.49 billion gallons of fuel ethanol</li>
+        </ul>
+
+        <!-- Timeline: Ethanol Production -->
+        <h4 class="text-sm font-semibold text-dark mb-4 uppercase tracking-widest">Production Process</h4>
+
+        <div class="hidden md:flex items-center justify-between mb-2">
+          <div class="flex flex-col items-center gap-2"><div class="timeline-circle">1</div><p class="text-xs font-medium text-dark text-center">Grow &amp; Harvest</p></div>
+          <div class="timeline-connector"></div>
+          <div class="flex flex-col items-center gap-2"><div class="timeline-circle">2</div><p class="text-xs font-medium text-dark text-center">Grind &amp; Extract</p></div>
+          <div class="timeline-connector"></div>
+          <div class="flex flex-col items-center gap-2"><div class="timeline-circle">3</div><p class="text-xs font-medium text-dark text-center">Fermentation</p></div>
+          <div class="timeline-connector"></div>
+          <div class="flex flex-col items-center gap-2"><div class="timeline-circle">4</div><p class="text-xs font-medium text-dark text-center">Alcohol Forms</p></div>
+          <div class="timeline-connector"></div>
+          <div class="flex flex-col items-center gap-2"><div class="timeline-circle">5</div><p class="text-xs font-medium text-dark text-center">Distillation</p></div>
+          <div class="timeline-connector"></div>
+          <div class="flex flex-col items-center gap-2"><div class="timeline-circle">6</div><p class="text-xs font-medium text-dark text-center">Blend &amp; Ship</p></div>
+        </div>
+
+        <div class="flex md:hidden flex-col gap-4">
+          <div class="flex items-center gap-4"><div class="timeline-circle">1</div><p class="text-sm font-medium">Grow &amp; Harvest</p></div>
+          <div class="flex items-center gap-4"><div class="timeline-circle">2</div><p class="text-sm font-medium">Grind &amp; Extract</p></div>
+          <div class="flex items-center gap-4"><div class="timeline-circle">3</div><p class="text-sm font-medium">Fermentation</p></div>
+          <div class="flex items-center gap-4"><div class="timeline-circle">4</div><p class="text-sm font-medium">Alcohol Forms</p></div>
+          <div class="flex items-center gap-4"><div class="timeline-circle">5</div><p class="text-sm font-medium">Distillation</p></div>
+          <div class="flex items-center gap-4"><div class="timeline-circle">6</div><p class="text-sm font-medium">Blend &amp; Ship</p></div>
+        </div>
+      </div>
+
+      <!-- Type 2: Biodiesel -->
+      <div class="mb-10" data-aos="fade-up">
+        <h3 class="text-xl font-semibold mb-3" style="color:#2e7d32">2. Biodiesel</h3>
+        <p class="text-dark/90 leading-relaxed mb-4">
+          Biodiesel is made from renewable resources like animal fats, vegetable oil, and recycled cooking grease. Through a chemical process called transesterification, those oils react with an alcohol (usually methanol) in the presence of a catalyst to produce biodiesel. It is blended with regular petroleum diesel for use in diesel engines in trucks, buses, and farm equipment.
+        </p>
+        <ul class="space-y-2 text-sm text-dark/80 list-none">
+          <li class="flex gap-2"><span style="color:#2e7d32">●</span> Accounted for 5% of U.S. biofuel production in 2025 (1.15 billion gallons produced)</li>
+          <li class="flex gap-2"><span style="color:#2e7d32">●</span> Rudolf Diesel, inventor of the diesel engine in 1897, actually experimented with vegetable oil as fuel</li>
+        </ul>
+      </div>
+
+      <!-- Type 3: Renewable Diesel -->
+      <div class="mb-10" data-aos="fade-up">
+        <h3 class="text-xl font-semibold mb-3" style="color:#2e7d32">3. Renewable Diesel</h3>
+        <p class="text-dark/90 leading-relaxed">
+          Renewable diesel is chemically very similar to regular petroleum diesel, similar enough that it can be used as a straight drop-in fuel with no blending required, in any diesel engine. It accounted for about 14% of U.S. biofuel production in 2025 (2.92 billion gallons), up from just 1.50 billion gallons in 2022.
+        </p>
+      </div>
+
+      <!-- Type 4: Other and Emerging -->
+      <div class="mb-14" data-aos="fade-up">
+        <h3 class="text-xl font-semibold mb-3" style="color:#2e7d32">4. Other and Emerging Biofuels</h3>
+        <p class="text-dark/90 leading-relaxed mb-4">This category includes:</p>
+        <ul class="space-y-2 text-sm text-dark/80 mb-4 list-none">
+          <li class="flex gap-2"><span style="color:#2e7d32">●</span> <span><strong>Sustainable Aviation Fuel (SAF):</strong> renewable jet fuel being developed to decarbonize air travel</span></li>
+          <li class="flex gap-2"><span style="color:#2e7d32">●</span> <span><strong>Renewable heating oil:</strong> used in home and building heating systems</span></li>
+          <li class="flex gap-2"><span style="color:#2e7d32">●</span> <span><strong>Renewable naphtha and gasoline:</strong> still in early stages of commercialization</span></li>
+          <li class="flex gap-2"><span style="color:#2e7d32">●</span> <span><strong>Biogas:</strong> methane captured from landfills, sewage plants, and livestock manure, burned for heat or electricity</span></li>
+        </ul>
+        <p class="text-dark/90 leading-relaxed">These fuels accounted for about 0.62 billion gallons of U.S. production in 2025, up from 0.20 billion in 2022, and are in various stages of development.</p>
+      </div>
+
+      <!-- Next Generation -->
+      <div class="mb-14 rounded-lg p-6 border-2 bg-white" style="border-color:#2e7d32" data-aos="fade-up">
+        <p class="text-xs uppercase tracking-widest font-semibold mb-3" style="color:#2e7d32">Next Generation: Cellulosic Ethanol</p>
+        <p class="text-dark/80 leading-relaxed text-sm">
+          Trees and grasses require far less fertilizer and water than corn and can grow on land unsuitable for food crops. Ethanol made from these sources is called cellulosic ethanol and is considered an advanced biofuel. However, it is not yet economically viable at commercial scale. As of the end of 2022, the U.S. had no commercial cellulosic ethanol production.
+        </p>
+      </div>
+
+      <!-- Production Table -->
+      <div data-aos="fade-up">
+        <h3 class="text-xl font-semibold text-dark mb-4">U.S. Biofuel Production in 2025</h3>
+        <div class="overflow-x-auto rounded-lg border border-gray-200 mb-3">
+          <table class="chem-table w-full text-sm text-left">
+            <thead style="background:#2e7d32" class="text-white">
+              <tr>
+                <th class="px-5 py-3 font-semibold">Type</th>
+                <th class="px-5 py-3 font-semibold">Production (bil. gal.)</th>
+                <th class="px-5 py-3 font-semibold">Share of Total</th>
+              </tr>
+            </thead>
+            <tbody class="text-dark/80">
+              <tr class="border-b border-gray-100">
+                <td class="px-5 py-3 font-medium">Fuel Ethanol</td>
+                <td class="px-5 py-3">16.49</td>
+                <td class="px-5 py-3">78%</td>
+              </tr>
+              <tr class="border-b border-gray-100">
+                <td class="px-5 py-3 font-medium">Biodiesel</td>
+                <td class="px-5 py-3">1.15</td>
+                <td class="px-5 py-3">5%</td>
+              </tr>
+              <tr class="border-b border-gray-100">
+                <td class="px-5 py-3 font-medium">Renewable Diesel</td>
+                <td class="px-5 py-3">2.92</td>
+                <td class="px-5 py-3">14%</td>
+              </tr>
+              <tr class="border-b border-gray-100">
+                <td class="px-5 py-3 font-medium">Other Biofuels</td>
+                <td class="px-5 py-3">0.62</td>
+                <td class="px-5 py-3">3%</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-bold">Total</td>
+                <td class="px-5 py-3 font-bold">21.18</td>
+                <td class="px-5 py-3 font-bold">100%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-muted">Source: U.S. EIA, Monthly Energy Review, April 2026</p>
+      </div>
+
+      <!-- Production Trends Chart -->
+      <div class="mt-16" data-aos="fade-up">
+        <h3 class="text-xl font-semibold text-dark mb-2">U.S. Biofuel Production Trends, 2005-2025</h3>
+        <p class="text-sm text-muted mb-6">Billions of gallons per year, by fuel type. 2005 is when the federal Renewable Fuel Standard took effect.</p>
+        <div class="bg-offwhite rounded-lg border border-gray-200 p-6">
+          <canvas id="productionChart" height="110"></canvas>
+        </div>
+        <p class="text-xs text-muted mt-2">Source: U.S. EIA, Monthly Energy Review, April 2026. Tables 10.3, 10.4a, 10.4b, 10.4c.</p>
+      </div>
+
+      <!-- Trend callout cards -->
+      <div class="grid md:grid-cols-3 gap-6 mt-10" data-aos="fade-up">
+        <div class="bg-white rounded-lg shadow-md p-6" style="border-left:4px solid #2e7d32">
+          <p class="text-2xl font-bold" style="color:#2e7d32">5x</p>
+          <p class="mt-1 text-sm text-muted">total production growth from 2005 to 2025 (4.0B to 21.2B gallons)</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6" style="border-left:4px solid #66bb6a">
+          <p class="text-2xl font-bold" style="color:#66bb6a">50x</p>
+          <p class="mt-1 text-sm text-muted">growth in renewable diesel since 2011, the fastest-growing biofuel category</p>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-6" style="border-left:4px solid #a5d6a7">
+          <p class="text-2xl font-bold" style="color:#388e3c">-13%</p>
+          <p class="mt-1 text-sm text-muted">production drop in 2020 due to COVID-19 reducing fuel demand</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="border-t border-gray-200 max-w-5xl mx-auto mt-20"></div>
+  </section>
+
+  <!-- SECTION 3 - ADVANTAGES -->
+  <section id="advantages" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <h2 class="text-3xl font-bold text-dark mb-10" data-aos="fade-up">Advantages</h2>
+
+      <!-- Banner image with quote -->
+      <div class="relative h-72 rounded-lg overflow-hidden shadow-md mb-14" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1473773508845-188df298d2d1?auto=format&fit=crop&w=1200&q=80"
+             alt="Crops growing in field" class="absolute inset-0 w-full h-full object-cover" />
+        <div class="absolute inset-0" style="background:rgba(26,26,26,0.55)"></div>
+        <div class="relative z-10 flex items-center justify-center h-full px-8">
+          <p class="text-white text-center text-lg md:text-xl font-light italic max-w-2xl leading-relaxed">
+            "Biofuel crops grow back every season. Oil takes millions of years."
+          </p>
+        </div>
+      </div>
+
+      <!-- Advantages Cards Grid -->
+      <div class="grid md:grid-cols-2 gap-6" data-aos="fade-up">
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5" style="color:#2e7d32">&#10003;</span>
+            <div>
+              <h4 class="font-semibold text-dark mb-1">Cleaner Burning</h4>
+              <p class="text-sm text-dark/80 leading-relaxed">Ethanol-gasoline blends burn cleaner than pure gasoline and produce higher octane, which reduces engine knocking and cuts carbon monoxide emissions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5" style="color:#2e7d32">&#10003;</span>
+            <div>
+              <h4 class="font-semibold text-dark mb-1">Lower Greenhouse Gas Emissions</h4>
+              <p class="text-sm text-dark/80 leading-relaxed">Relative to the fossil fuels they displace, greenhouse gas emissions are reduced by about 12% from ethanol and 41% from biodiesel. Biodiesel's advantage comes from lower agricultural inputs and more efficient conversion of feedstocks.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5" style="color:#2e7d32">&#10003;</span>
+            <div>
+              <h4 class="font-semibold text-dark mb-1">Renewable and Regrowable</h4>
+              <p class="text-sm text-dark/80 leading-relaxed">Unlike oil that takes millions of years to form, biofuel crops grow back every season. The plants also absorb CO<sub>2</sub> while growing, making the overall carbon cycle much closer to neutral than burning fossil fuels.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5" style="color:#2e7d32">&#10003;</span>
+            <div>
+              <h4 class="font-semibold text-dark mb-1">Safe if Spilled</h4>
+              <p class="text-sm text-dark/80 leading-relaxed">Pure ethanol and biodiesel are nontoxic and biodegradable. If spilled, they break down into harmless substances, unlike petroleum, which can contaminate groundwater for decades.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5" style="color:#2e7d32">&#10003;</span>
+            <div>
+              <h4 class="font-semibold text-dark mb-1">Energy Independence</h4>
+              <p class="text-sm text-dark/80 leading-relaxed">Countries can grow their own fuel rather than importing oil from foreign nations. This is a major national security and economic benefit. The U.S. was a net exporter of biofuels in 2022, meaning it produced more than it used.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5" style="color:#2e7d32">&#10003;</span>
+            <div>
+              <h4 class="font-semibold text-dark mb-1">Works in Existing Vehicles</h4>
+              <p class="text-sm text-dark/80 leading-relaxed">Low-blend biofuels like E10 gasoline require zero modifications to existing car engines. Most drivers are already using it at every fill-up.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5" style="color:#2e7d32">&#10003;</span>
+            <div>
+              <h4 class="font-semibold text-dark mb-1">Supports Farmers and Rural Economies</h4>
+              <p class="text-sm text-dark/80 leading-relaxed">Demand for corn, soybeans, and sugarcane for biofuel creates income for agricultural communities and rural regions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5" style="color:#2e7d32">&#10003;</span>
+            <div>
+              <h4 class="font-semibold text-dark mb-1">Policy-Backed Growth</h4>
+              <p class="text-sm text-dark/80 leading-relaxed">The federal Renewable Fuel Standard (RFS) program and California's Low Carbon Fuel Standard (LCFS) have driven consistent growth in biofuel use. Oregon and Washington have similar programs. A $1.00 per gallon tax credit for biodiesel and renewable diesel blenders is currently in effect.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="border-t border-gray-200 max-w-5xl mx-auto mt-20"></div>
+  </section>
+
+  <!-- SECTION 4 - DISADVANTAGES -->
+  <section id="disadvantages" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <h2 class="text-3xl font-bold text-dark mb-10" data-aos="fade-up">Disadvantages</h2>
+
+      <div class="grid md:grid-cols-2 gap-6" data-aos="fade-up">
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5 text-red-500">&#9888;</span>
+            <div>
+              <h4 class="font-semibold text-dark mb-1">Food vs. Fuel</h4>
+              <p class="text-sm text-dark/80 leading-relaxed">Using corn and soybeans for fuel competes with their use as food. Even if the U.S. dedicated its entire corn and soybean crop to biofuels, it would only meet about 12% of gasoline demand and 6% of diesel demand, while leaving nothing for food production.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5 text-red-500">&#9888;</span>
+            <div>
+              <h4 class="font-semibold text-dark mb-1">Land Use and Deforestation</h4>
+              <p class="text-sm text-dark/80 leading-relaxed">Clearing forests or natural land to grow biofuel crops releases large amounts of stored CO<sub>2</sub> into the atmosphere. This can actually make biofuels worse for the climate than fossil fuels in some cases.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5 text-red-500">&#9888;</span>
+            <div>
+              <h4 class="font-semibold text-dark mb-1">Still Requires Some Fossil Fuels to Produce</h4>
+              <p class="text-sm text-dark/80 leading-relaxed">The production process for ethanol and other biofuels requires a heat source, which currently involves some fossil fuel use. It is not a fully clean process from start to finish.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5 text-red-500">&#9888;</span>
+            <div>
+              <h4 class="font-semibold text-dark mb-1">Evaporative Emissions and Smog</h4>
+              <p class="text-sm text-dark/80 leading-relaxed">Ethanol-gasoline blends produce higher evaporative emissions from fuel tanks and pumping equipment. These contribute to ground-level ozone and smog, a trade-off for the cleaner combustion.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5 text-red-500">&#9888;</span>
+            <div>
+              <h4 class="font-semibold text-dark mb-1">Cannot Replace Oil at Scale</h4>
+              <p class="text-sm text-dark/80 leading-relaxed">Biofuels cannot realistically replace all petroleum without massive impacts on food supply and land use. They are a supplement, not a full replacement.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5 text-red-500">&#9888;</span>
+            <div>
+              <h4 class="font-semibold text-dark mb-1">Not Profitable Without Subsidies</h4>
+              <p class="text-sm text-dark/80 leading-relaxed">Historically, biofuels have required government tax credits and mandates to compete economically with cheap petroleum. Remove the subsidies and the economics weaken significantly.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100 md:col-span-2">
+          <div class="flex items-start gap-3">
+            <span class="text-xl mt-0.5 text-red-500">&#9888;</span>
+            <div>
+              <h4 class="font-semibold text-dark mb-1">Cellulosic Promise Unfulfilled</h4>
+              <p class="text-sm text-dark/80 leading-relaxed">Next-generation biofuels from non-food plant matter like grasses and wood waste have been talked about for decades, but as of the end of 2022, there was still no commercial-scale cellulosic ethanol production in the U.S.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="border-t border-gray-200 max-w-5xl mx-auto mt-20"></div>
+  </section>
+
+  <!-- SECTION 5 - DISTRIBUTION -->
+  <section id="distribution" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <h2 class="text-3xl font-bold text-dark mb-6" data-aos="fade-up">Where in the World?</h2>
+      <p class="text-dark/80 leading-relaxed mb-12 max-w-3xl" data-aos="fade-up">
+        Biofuel production is concentrated in a small number of countries with strong agricultural sectors and supportive government policies. In 2024, the U.S., Brazil, and EU together accounted for nearly three-quarters of all biofuels consumed globally.
+      </p>
+
+      <!-- Top Producers Table -->
+      <div data-aos="fade-up" class="mb-14">
+        <h3 class="text-xl font-semibold text-dark mb-4">Top Global Producers</h3>
+        <div class="overflow-x-auto rounded-lg border border-gray-200 mb-3">
+          <table class="chem-table w-full text-sm text-left">
+            <thead style="background:#2e7d32" class="text-white">
+              <tr>
+                <th class="px-5 py-3 font-semibold">Country or Region</th>
+                <th class="px-5 py-3 font-semibold">Share of Global Production</th>
+              </tr>
+            </thead>
+            <tbody class="text-dark/80">
+              <tr class="border-b border-gray-100">
+                <td class="px-5 py-3 font-medium">United States</td>
+                <td class="px-5 py-3">~37 to 39%</td>
+              </tr>
+              <tr class="border-b border-gray-100">
+                <td class="px-5 py-3 font-medium">Brazil</td>
+                <td class="px-5 py-3">~22%</td>
+              </tr>
+              <tr class="border-b border-gray-100">
+                <td class="px-5 py-3 font-medium">European Union</td>
+                <td class="px-5 py-3">~10%</td>
+              </tr>
+              <tr class="border-b border-gray-100">
+                <td class="px-5 py-3 font-medium">Indonesia</td>
+                <td class="px-5 py-3">~5%</td>
+              </tr>
+              <tr>
+                <td class="px-5 py-3 font-medium">China</td>
+                <td class="px-5 py-3">Growing rapidly, up 30% in 2024</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-muted">The U.S., Brazil, and EU together account for nearly three-quarters of all biofuels consumed globally.</p>
+      </div>
+
+      <!-- Country Spotlights -->
+      <h3 class="text-xl font-semibold text-dark mb-6" data-aos="fade-up">Country Spotlights</h3>
+      <div class="grid md:grid-cols-2 gap-6 mb-14" data-aos="fade-up">
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <h4 class="font-semibold text-dark mb-1">United States <span class="font-normal text-muted">#1 Producer</span></h4>
+          <p class="text-sm text-dark/80 leading-relaxed">The U.S. produces about 38% of all biofuels globally. The heart of production is the Corn Belt in Iowa, Illinois, Indiana, Nebraska, and Minnesota, where hundreds of ethanol plants process billions of bushels of corn annually. The U.S. introduced its Renewable Fuel Standard in 2005, mandating minimum biofuel volumes in transportation fuel. Main feedstocks are corn for ethanol and soybeans for biodiesel.</p>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <h4 class="font-semibold text-dark mb-1">Brazil <span class="font-normal text-muted">#2 Producer</span></h4>
+          <p class="text-sm text-dark/80 leading-relaxed">Brazil is the world's most advanced biofuel economy. Its Proalcool program, launched in the 1970s after the oil crisis, made sugarcane ethanol a national priority. Brazil runs millions of flex-fuel vehicles that can run on any mix of gasoline and ethanol. Main feedstock is sugarcane.</p>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <h4 class="font-semibold text-dark mb-1">Germany and the European Union <span class="font-normal text-muted">#3 Region</span></h4>
+          <p class="text-sm text-dark/80 leading-relaxed">Germany is Europe's leading biofuel producer. The EU focuses heavily on biodiesel made from rapeseed (canola) and used cooking oil. EU climate policy mandates drive continued growth.</p>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100">
+          <h4 class="font-semibold text-dark mb-1">Indonesia</h4>
+          <p class="text-sm text-dark/80 leading-relaxed">Indonesia is a major and growing producer, focused on palm oil-based biodiesel. It has aggressive blending mandates as part of its national energy policy.</p>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100 md:col-span-2">
+          <h4 class="font-semibold text-dark mb-1">India and China <span class="font-normal text-muted">Fast Growing</span></h4>
+          <p class="text-sm text-dark/80 leading-relaxed">Both saw major production increases in 2024 (India +26%, China +30%) as national energy security and climate policies push biofuel adoption.</p>
+        </div>
+
+      </div>
+
+      <!-- U.S. Regional Notes -->
+      <div data-aos="fade-up">
+        <h3 class="text-xl font-semibold text-dark mb-6">U.S. Regional Notes</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <ul class="space-y-4 text-dark/80 leading-relaxed text-sm">
+            <li class="flex gap-3">
+              <span class="font-bold text-lg leading-none mt-0.5" style="color:#2e7d32">&#8594;</span>
+              <span><strong>Midwest Corn Belt:</strong> highest concentration of ethanol plants</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="font-bold text-lg leading-none mt-0.5" style="color:#2e7d32">&#8594;</span>
+              <span><strong>Gulf Coast:</strong> major refinery and blending hub</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="font-bold text-lg leading-none mt-0.5" style="color:#2e7d32">&#8594;</span>
+              <span><strong>California:</strong> largest biofuel consumer, driven by LCFS policy</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="font-bold text-lg leading-none mt-0.5" style="color:#2e7d32">&#8594;</span>
+              <span><strong>Pacific Northwest (Oregon and Washington):</strong> state-level clean fuel programs</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="border-t border-gray-200 max-w-5xl mx-auto mt-20"></div>
+  </section>
+
+  <!-- SECTION 6 - REFERENCES -->
+  <section id="references" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <h2 class="text-3xl font-bold text-dark mb-10" data-aos="fade-up">References and Sources</h2>
+
+      <div class="space-y-6">
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100" data-aos="fade-up" data-aos-delay="0">
+          <div class="flex flex-wrap items-center gap-3 mb-2">
+            <span class="text-xs bg-gray-200 text-muted px-2 py-0.5 rounded-full font-medium">Government Agency</span>
+          </div>
+          <p class="text-sm italic text-muted leading-relaxed">
+            U.S. Energy Information Administration. <a href="https://www.eia.gov/energyexplained/biofuels/" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-800" style="color:#2e7d32">"Biofuels Explained."</a>
+            <em>EIA.gov</em>. Primary source, teacher recommended. Last updated February 28, 2024.
+            <a href="https://www.eia.gov/energyexplained/biofuels/" class="underline" style="color:#2e7d32" target="_blank">https://www.eia.gov/energyexplained/biofuels/</a>
+          </p>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100" data-aos="fade-up" data-aos-delay="50">
+          <div class="flex flex-wrap items-center gap-3 mb-2">
+            <span class="text-xs bg-gray-200 text-muted px-2 py-0.5 rounded-full font-medium">Government Agency</span>
+          </div>
+          <p class="text-sm italic text-muted leading-relaxed">
+            U.S. Energy Information Administration. <a href="https://www.eia.gov/energyexplained/biofuels/biofuels-and-the-environment.php" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-800" style="color:#2e7d32">"Biofuels and the Environment."</a>
+            <em>EIA.gov</em>.
+            <a href="https://www.eia.gov/energyexplained/biofuels/biofuels-and-the-environment.php" class="underline" style="color:#2e7d32" target="_blank">https://www.eia.gov/energyexplained/biofuels/biofuels-and-the-environment.php</a>
+          </p>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex flex-wrap items-center gap-3 mb-2">
+            <span class="text-xs bg-gray-200 text-muted px-2 py-0.5 rounded-full font-medium">Government Agency</span>
+          </div>
+          <p class="text-sm italic text-muted leading-relaxed">
+            U.S. Energy Information Administration. <a href="https://www.eia.gov/kids/energy-sources/biofuels/" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-800" style="color:#2e7d32">"Energy Kids: Biofuels."</a>
+            <em>EIA.gov</em>.
+            <a href="https://www.eia.gov/kids/energy-sources/biofuels/" class="underline" style="color:#2e7d32" target="_blank">https://www.eia.gov/kids/energy-sources/biofuels/</a>
+          </p>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100" data-aos="fade-up" data-aos-delay="150">
+          <div class="flex flex-wrap items-center gap-3 mb-2">
+            <span class="text-xs bg-gray-200 text-muted px-2 py-0.5 rounded-full font-medium">Government Agency</span>
+          </div>
+          <p class="text-sm italic text-muted leading-relaxed">
+            U.S. Energy Information Administration. <a href="https://www.eia.gov/totalenergy/data/monthly/" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-800" style="color:#2e7d32">"Monthly Energy Review, Renewable Energy."</a>
+            <em>EIA.gov</em>, February 2024. Source for all production and consumption data and tables.
+            <a href="https://www.eia.gov/totalenergy/data/monthly/" class="underline" style="color:#2e7d32" target="_blank">https://www.eia.gov/totalenergy/data/monthly/</a>
+          </p>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex flex-wrap items-center gap-3 mb-2">
+            <span class="text-xs bg-gray-200 text-muted px-2 py-0.5 rounded-full font-medium">Research Organization</span>
+          </div>
+          <p class="text-sm italic text-muted leading-relaxed">
+            Our World in Data. <a href="https://ourworldindata.org/bioenergy-biofuels" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-800" style="color:#2e7d32">"Bioenergy and Biofuels."</a>
+            <em>OurWorldInData.org</em>.
+            <a href="https://ourworldindata.org/bioenergy-biofuels" class="underline" style="color:#2e7d32" target="_blank">https://ourworldindata.org/bioenergy-biofuels</a>
+          </p>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100" data-aos="fade-up" data-aos-delay="250">
+          <div class="flex flex-wrap items-center gap-3 mb-2">
+            <span class="text-xs bg-gray-200 text-muted px-2 py-0.5 rounded-full font-medium">Research Organization</span>
+          </div>
+          <p class="text-sm italic text-muted leading-relaxed">
+            Carbon Brief. <a href="https://www.carbonbrief.org/qa-how-countries-are-using-biofuels-to-meet-their-climate-targets/" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-800" style="color:#2e7d32">"How Countries Are Using Biofuels to Meet Climate Targets."</a>
+            <em>CarbonBrief.org</em>, 2025.
+            <a href="https://www.carbonbrief.org/qa-how-countries-are-using-biofuels-to-meet-their-climate-targets/" class="underline" style="color:#2e7d32" target="_blank">https://www.carbonbrief.org/qa-how-countries-are-using-biofuels-to-meet-their-climate-targets/</a>
+          </p>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+          <div class="flex flex-wrap items-center gap-3 mb-2">
+            <span class="text-xs bg-gray-200 text-muted px-2 py-0.5 rounded-full font-medium">Encyclopedia</span>
+          </div>
+          <p class="text-sm italic text-muted leading-relaxed">
+            Britannica. <a href="https://www.britannica.com/technology/biofuel" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-800" style="color:#2e7d32">"Biofuel."</a>
+            <em>Britannica.com</em>.
+            <a href="https://www.britannica.com/technology/biofuel" class="underline" style="color:#2e7d32" target="_blank">https://www.britannica.com/technology/biofuel</a>
+          </p>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100" data-aos="fade-up" data-aos-delay="350">
+          <div class="flex flex-wrap items-center gap-3 mb-2">
+            <span class="text-xs bg-gray-200 text-muted px-2 py-0.5 rounded-full font-medium">Academic Journal</span>
+          </div>
+          <p class="text-sm italic text-muted leading-relaxed">
+            Proceedings of the National Academy of Sciences. <a href="https://www.pnas.org/doi/10.1073/pnas.0604600103" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-800" style="color:#2e7d32">"Costs and Benefits of Biodiesel and Ethanol."</a>
+            <em>PNAS.org</em>.
+            <a href="https://www.pnas.org/doi/10.1073/pnas.0604600103" class="underline" style="color:#2e7d32" target="_blank">https://www.pnas.org/doi/10.1073/pnas.0604600103</a>
+          </p>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100" data-aos="fade-up" data-aos-delay="400">
+          <div class="flex flex-wrap items-center gap-3 mb-2">
+            <span class="text-xs bg-gray-200 text-muted px-2 py-0.5 rounded-full font-medium">Educational</span>
+          </div>
+          <p class="text-sm italic text-muted leading-relaxed">
+            GeeksforGeeks. <a href="https://www.geeksforgeeks.org/upsc/largest-biofuel-production-countries/" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-800" style="color:#2e7d32">"Top 10 Largest Biofuel Production Countries."</a>
+            <em>GeeksforGeeks.org</em>.
+            <a href="https://www.geeksforgeeks.org/upsc/largest-biofuel-production-countries/" class="underline" style="color:#2e7d32" target="_blank">https://www.geeksforgeeks.org/upsc/largest-biofuel-production-countries/</a>
+          </p>
+        </div>
+
+        <div class="bg-offwhite rounded-lg p-6 border border-gray-100" data-aos="fade-up" data-aos-delay="450">
+          <div class="flex flex-wrap items-center gap-3 mb-2">
+            <span class="text-xs bg-gray-200 text-muted px-2 py-0.5 rounded-full font-medium">Industry</span>
+          </div>
+          <p class="text-sm italic text-muted leading-relaxed">
+            Baker Commodities. <a href="https://bakercommodities.com/blog/2022/12/01/everything-you-need-to-know-about-biofuels/" target="_blank" rel="noopener noreferrer" class="underline hover:text-green-800" style="color:#2e7d32">"Everything to Know About Biofuels."</a>
+            <em>BakerCommodities.com</em>, December 1, 2022.
+            <a href="https://bakercommodities.com/blog/2022/12/01/everything-you-need-to-know-about-biofuels/" class="underline" style="color:#2e7d32" target="_blank">https://bakercommodities.com/blog/2022/12/01/everything-you-need-to-know-about-biofuels/</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#2e7d32" class="py-10">
+    <p class="text-center text-white text-sm font-light tracking-wide">
+      Biofuels: Alternative Energy Project
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true, offset: 80 });
+
+    // Production chart — annual totals from EIA MER Tables 10.3, 10.4a, 10.4b, 10.4c
+    const chartLabels = ['2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'];
+    const ethanol        = [3.90, 4.88, 6.52, 9.31,10.94,13.30,13.93,13.22,13.29,14.31,14.81,15.41,15.94,16.09,15.78,13.94,15.02,15.36,15.58,16.23,16.49];
+    const biodiesel      = [0.09, 0.25, 0.49, 0.68, 0.52, 0.34, 0.97, 0.99, 1.36, 1.28, 1.26, 1.57, 1.60, 1.86, 1.72, 1.81, 1.71, 1.62, 1.70, 1.67, 1.15];
+    const renewDiesel    = [0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.06, 0.05, 0.11, 0.16, 0.18, 0.24, 0.26, 0.31, 0.49, 0.53, 0.86, 1.50, 2.60, 3.19, 2.92];
+    const other          = [0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.01, 0.02, 0.02, 0.02, 0.03, 0.03, 0.03, 0.08, 0.20, 0.30, 0.35, 0.62];
+
+    new Chart(document.getElementById('productionChart'), {
+      type: 'bar',
+      data: {
+        labels: chartLabels,
+        datasets: [
+          { label: 'Fuel Ethanol',      data: ethanol,     backgroundColor: '#1b5e20', stack: 's' },
+          { label: 'Biodiesel',          data: biodiesel,   backgroundColor: '#388e3c', stack: 's' },
+          { label: 'Renewable Diesel',   data: renewDiesel, backgroundColor: '#66bb6a', stack: 's' },
+          { label: 'Other Biofuels',     data: other,       backgroundColor: '#a5d6a7', stack: 's' },
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom', labels: { font: { family: 'Inter' }, boxWidth: 14 } },
+          tooltip: {
+            callbacks: {
+              label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y.toFixed(2)}B gal`,
+              footer: items => ` Total: ${items.reduce((s,i) => s + i.parsed.y, 0).toFixed(2)}B gal`
+            }
+          }
+        },
+        scales: {
+          x: { stacked: true, grid: { display: false }, ticks: { font: { family: 'Inter', size: 11 } } },
+          y: {
+            stacked: true,
+            title: { display: true, text: 'Billion Gallons', font: { family: 'Inter', size: 12 } },
+            ticks: { font: { family: 'Inter', size: 11 }, callback: v => v + 'B' }
+          }
+        }
+      }
+    });
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function activateNav() {
+      let scrollY = window.scrollY + 100;
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+        if (scrollY >= top && scrollY < top + height) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + id) link.classList.add('active');
+          });
+        }
+      });
+    }
+
+    window.addEventListener('scroll', activateNav, { passive: true });
+    activateNav();
+  </script>
+
+</body>
+</html>
